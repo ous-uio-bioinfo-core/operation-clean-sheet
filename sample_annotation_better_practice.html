@@ -60,10 +60,10 @@
     Sample annotation spreadsheets often need to be read and understand by both other humans than the biologist and computer programs used for data analysis. It may not be a topic many biologists pay a lot of attention to, but unfortunate choices in the initial creation of the spreadsheet may later give opportunities for mistakes to be made in the analysis. In addition, it usually means that a significant amount of time must be used in back-and-forth messages between the biologist and the bioinformatician to clear out ambiguities. For those who know how to do it, generating a good sample annotation spreadsheet is not a difficult task and it can save a lot of valuable time later.</p>
     
     <p>   
-    This guide focuses on the creation of tidy spreadsheets that are less error-prone and easier for computers to proccess, although they may seem slightly less pleasent to the human eye. If you need to show your sample annotation in a presentation, you should make a pretty ad-hoc version but keep the main file computer-friendly.
+    This guide focuses on the creation of tidy spreadsheets that are less error-prone and easier for computers to process, although they may seem slightly less pleasant to the human eye. If you need to show your sample annotation in a presentation, you should make a pretty ad-hoc version but keep the main file computer-friendly.
     </p>
     <p>    
-    We hope that the following advices help the biologist realize which practices are best avoided, understand why they are problematic and learn how to fix them. At the same time, we acknowledge that some of the "unfortunate" practices have value for the biologist and will be continued, but now after a better informed decision.</p> 
+    We hope that the following advises help the biologist realize which practices are best avoided, understand why they are problematic and learn how to fix them. At the same time, we acknowledge that some of the "unfortunate" practices have value for the biologist and will be continued, but now after a better informed decision.</p> 
 
 
 <br/>
@@ -74,7 +74,7 @@
     <h2><center>A practical example: "the Sample Annotation File from Hell"</center></h2>
     
     <p>In this illustration we have collected examples of the most common problematic practices (highlighted with red numbers) to a create a spreadsheet that would be the nightmare of any data analyst. Below you can find a list with 
-    the corresponding problems and some recommentadations on how to fix them. You can click on the <q>Read more</q> options to get an extended explanation. Under the list you can see how the spreadsheet looks after we have applied the better practices.</p>
+    the corresponding problems and some recommendations on how to fix them. You can click on the <q>Read more</q> options to get an extended explanation. Under the list you can see how the spreadsheet looks after we have applied the better practices.</p>
     <br/>
     <center>
     
@@ -87,53 +87,53 @@
     <div class="circleborder errorclass" style="bottom: 77%;left: 23%;" title="Weird column names">2</div>
     <div class="circleborder errorclass" style="bottom: 77%;left: 52%;" title="Weird column names">2</div>
     <div class="circleborder errorclass" style="bottom: 77%;left: 65%;" title="Long column names">3</div>
-    <div class="circleborder errorclass" style="bottom: 63%;left: 7%;" title="Consistent sample identifiers">4</div>
-    <div class="circleborder errorclass" style="bottom: 47%;left: 15%;" title="Categorical variables">5</div>
+    <div class="circleborder errorclass" style="bottom: 63%;left: 7%;" title="Inconsistent sample identifiers">4</div>
+    <div class="circleborder errorclass" style="bottom: 47%;left: 15%;" title="None-categorical categorical variables">5</div>
     <div class="circleborder errorclass" style="bottom: 67%;left: 64%;" title="Decimal variability">6</div>
-    <div class="circleborder errorclass" style="bottom: 73%;left: 0%;" title="Formatted information">7</div>
-    <div class="circleborder errorclass" style="bottom: 40%;left: 0%;" title="Formatted information">7</div>
-    <div class="circleborder errorclass" style="bottom: 50%;left: 27%;" title="Formatted information">7</div>
+    <div class="circleborder errorclass" style="bottom: 73%;left: 0%;" title="Information in formatting">7</div>
+    <div class="circleborder errorclass" style="bottom: 40%;left: 0%;" title="Information in formatting">7</div>
+    <div class="circleborder errorclass" style="bottom: 50%;left: 27%;" title="Information in formatting">7</div>
     <div class="circleborder errorclass" style="bottom: 22%;left: 65%;" title="Horror vacui">8</div>
     <div class="circleborder errorclass" style="bottom: 18%;left: 24%;" title="Numbers are numbers">9</div>
-    <div class="circleborder errorclass" style="bottom: 25%;left: 82%;" title="Dating format">10</div>
+    <div class="circleborder errorclass" style="bottom: 25%;left: 82%;" title="Impractical date format">10</div>
 	<div class="circleborder errorclass" style="bottom: 85%;left: 25%;" title="Merged cells">11</div>
-	<div class="circleborder errorclass" style="bottom: 77%;left: 44%;" title="English only">12</div>
+	<div class="circleborder errorclass" style="bottom: 77%;left: 44%;" title="Anglophobia">12</div>
     </div>
     
     <p><b>Which problems do we find in this spreadsheet? And how can we solve them?</b></p></center>
     <ol type="1">
     
         <li><b>Weird file name:</b> File name contains blank spaces.  It is a good practice to substitute blank spaces with a hyphen &#8208; or an underscore _.
-	<a href="#naming">Read more about naming</a></li>
+	<a href="#namingvariables">Read more about naming</a></li>
 	
-	<li><b>Weird column names:</b> Several variable names have blank spaces, newline and/or special characters (beware of Norwegian characters!). It can cause problems when a different program reads those columns. Blank spaces can be substituted with an underscore _. It is also recommended not to use capitals in column names to prevent spelling mistakes. <a href="#naming">Read more about naming</a></li>
+	<li><b>Weird column names:</b> Several variable names have blank spaces, newline and/or special characters (beware of Norwegian characters!). It can cause problems when a different program reads those columns. Blank spaces can be substituted with an underscore _. It is also recommended not to use capitals in column names to prevent spelling mistakes. <a href="#namingvariables">Read more about naming</a></li>
 	
-	<li><b>Long column names:</b> Having short and meaningful column names helps to work with the data. If several columns refer to related information (for example different time points), they sould have consistent names. Additional information about the variable (description, units...) can be kept in a separate data dictionary. <a href="#naming">Read more about naming</a></li>
+	<li><b>Long column names:</b> Having short and meaningful column names helps to work with the data. If several columns refer to related information (for example different time points), they should have consistent names. Additional information about the variable (description, units...) can be kept in a separate data dictionary. <a href="#namingvariables">Read more about naming</a></li>
 	
-        <li><b>Consistent sample identifiers:</b> Some of the identifiers start with numbers and some with letters, and some use dots to separate the groups of numbers while others use underscores. Besides,
+        <li><b>Inconsistent sample identifiers:</b> Some of the identifiers start with numbers and some with letters, and some use dots to separate the groups of numbers while others use underscores. Besides,
 	theses numbers have different amounts of digits. This lacking of consistency could lead to problems if the individuals are sorted by their identifiers. <a href="#consistency">Read more about consistency</a>
-	<a href="#naming">Read more about naming</a></li>
+	<a href="#namingvalues">Read more about naming</a></li>
 	
-        <li><b>Categorical variables:</b> The disease variable has only two options: <q>control</q> and <q>case</q>, but these values are written in several different ways, which could be interpreted by a
+        <li><b>None-categorical categorical variables:</b> The disease variable has only two options: <q>control</q> and <q>case</q>, but these values are written in several different ways, which could be interpreted by a
         program as different conditions. <a href="#consistency">Read more about consistency</a></li>
         
         <li><b>Decimal variability:</b> The numeric columns show values with a different number of decimals. <a href="#consistency">Read more about consistency</a></li>
         
-       <li><b>Formatted information:</b> The information about the type of sickness (DCIS or benign) is codified by their position in the spreadsheet. There are also some samples with odd problems
+       <li><b>Information in formatting:</b> The information about the type of sickness (DCIS or benign) is codified by their position in the spreadsheet. There are also some samples with odd problems
 	shown in green and special cases marked with an asterisk. It is better to store this data in new variables. <a href="#information">Read more about storing information</a></li>
 	
-        <li><b>Horror vacui:</b> Some programs throw mistakes when they read a column with blank spaces. It is better to replace all of them with <q>NA</q>, which is universally recognised as an empty value.
+        <li><b>Horror vacui:</b> Some programs throw mistakes when they read a column with blank spaces. It is better to replace all of them with <q>NA</q>, which is universally recognized as an empty value.
 	<a href="#information">Read more about storing information</a></li>
 	
 	<li><b>Numbers are numbers:</b> Column <q>CD4-/CD8-</q> shows two values as <q>&lt;0.6</q>. Numeric columns should not include non-numeric symbols and specific comments can be stored in an extra <q>Comments</q> column.
 	<a href="#information">Read more about storing information</a></li>
 	
-        <li><b>Dating format:</b> The dates have different formats, and one of the cell shows extra information. The recommended format is YYYY-MM-DD and the extra information can be included in the <q>Comments</q>
+        <li><b>Impractical date format:</b> The dates have different formats, and one of the cell shows extra information. The recommended format is YYYY-MM-DD and the extra information can be included in the <q>Comments</q>
 	column. <a href="#dates">Read more about dates</a></li>
 	
 	<li><b>Merged cells:</b> Several cells have been merged into a single one. These kind of changes in the structure of the spreadsheet should be completely avoided. <a href="#structure">Read more about structure</a></li>
 	
-		<li><b>English only:</b> Some columns have norwegian names. If the ambition is to make a publication in an international journal from the study, this must be translated to english. <a href="#language">Read more about language</a></li>
+		<li><b>Anglo-phobia:</b> Some columns have norwegian names. If the ambition is to make a publication in an international journal from the study, this must be translated to English. <a href="#language">Read more about language</a></li>
     </ol>
     <p>This is how the spreadsheet looks after the modifications. We have highlighted the columns or cells modified or added to the previous table:</p>
     <br/>
@@ -147,15 +147,15 @@
     <div class="circleborder fixedclass" style="bottom: 81%;left: 20%;" title="Fixed Weird column names">2</div>
     <div class="circleborder fixedclass" style="bottom: 81%;left: 60%;" title="Fixed Weird column names">2</div>
     <div class="circleborder fixedclass" style="bottom: 81%;left: 68%;" title="Fixed Long column names">3</div>
-    <div class="circleborder fixedclass" style="bottom: 50%;left:  4%;" title="Fixed Consistent sample identifiers">4</div>
-    <div class="circleborder fixedclass" style="bottom: 47%;left: 15%;" title="Fixed Categorical variables">5</div>
+    <div class="circleborder fixedclass" style="bottom: 50%;left:  4%;" title="Fixed Inconsistent sample identifiers">4</div>
+    <div class="circleborder fixedclass" style="bottom: 47%;left: 15%;" title="Fixed None-categorical categorical variables">5</div>
     <div class="circleborder fixedclass" style="bottom: 67%;left: 64%;" title="Fixed Decimal variability">6</div>
-    <div class="circleborder fixedclass" style="bottom: 37%;left: 9%;" title="Fixed Formatted information">7</div>
-    <div class="circleborder fixedclass" style="bottom: 37%;left: 27%;" title="Fixed Formatted information">7</div>
+    <div class="circleborder fixedclass" style="bottom: 37%;left: 9%;" title="Fixed Information in formatting">7</div>
+    <div class="circleborder fixedclass" style="bottom: 37%;left: 27%;" title="Fixed Information in formatting">7</div>
     <div class="circleborder fixedclass" style="bottom: 23%;left: 67%;" title="Fixed Horror vacui">8</div>
     <div class="circleborder fixedclass" style="bottom: 19%;left: 20%;" title="Fixed Numbers are numbers">9</div>
-    <div class="circleborder fixedclass" style="bottom: 25%;left: 78%;" title="Fixed Dating format">10</div>
-	<div class="circleborder fixedclass" style="bottom: 75%;left: 50%;" title="Fixed English only">12</div>
+    <div class="circleborder fixedclass" style="bottom: 25%;left: 78%;" title="Fixed Impractical date format">10</div>
+	<div class="circleborder fixedclass" style="bottom: 75%;left: 50%;" title="Fixed Anglophobia">12</div>
 	
     </div>
     <br/>
@@ -165,18 +165,21 @@
     <h2><center>General concepts</center></h2>
     <br/>
      
-    <a name="naming"><h4>Naming</h4></a>
+    <a name="namingvariables"><h4>Naming of files and variables</h4></a>
     
     <p>It is important that the file can be read by most program. Thus, file names should not have any characters apart from letters and numbers, with the exception of
-    hyphens &#8208; or underscores _. Blank spaces can create problems when the data file is read by some computer programs, especially bioinformatic programs which often are not very robust for unexpected input. Instead you can separate the words using hyphens or underscores. If you never use capital letters, a lot of spelling mistakes will be avoided. These advices apply also to column names.</p>
+    hyphens &#8208; or underscores _. Blank spaces can create problems when the data file is read by some computer programs, especially bioinformatic programs which often are not very robust for unexpected input. Instead you can separate the words using hyphens or underscores. If you never use capital letters, a lot of spelling mistakes will be avoided. These advises apply also to column names (variables), since they may end up in file names as plots and tables. In addition variables may in the analysis be used as part of mathematical formulas where a lot of characters, like minus or plus, have a special meaning. All special characters are therefore best avoided in variable names, with the exception of underscore which has no known alternative interpretation.</p>
+     <br/>
+    <a name="namingvalues"><h4>Naming of Ids and values</h4></a>
     <p>Identification numbers for the samples should have the same number of digits. This is critical in order to prevent mistakes when sorting, as sometimes this field is treated as text and then <q>1000</q> would
-    go before <q>20</q>. These identifiers should start with a letter, as some programs may remove the zeros at the left of a numeric value. For instance if you have 20 samples, it is better to give them ids like "s01", "s02" ... than just numbering them 1-20. The main concept here is that the <a href="https://en.wikipedia.org/wiki/Lexicographical_order">alphabetical sort order</a> should be sensible and identical to what a numeric sort order would be (if possible). For instance the common naming of chromosomes, "chr1", "chr2".. violates this and dumb programs (which there are a lot of) would put "chr10" immediately after  "chr1".</p>
+    go before <q>20</q>. These identifiers should start with a letter, as some programs may remove the zeros at the left of a numeric value. For instance if you have 20 samples, it is better to give them ids like "s01", "s02" ... than just numbering them 1-20. The main concept here is that the <a href="https://en.wikipedia.org/wiki/Lexicographical_order">alphabetical sort order</a> should be sensible and identical to what a numeric sort order would be (if possible). For instance the common naming of chromosomes, "chr1", "chr2".. violates this and dumb programs (which there are a lot of) would put "chr10" immediately after  "chr1". In addition, sample IDs often end up as part of file names and should therefore ideally follow the same principles, i.e no special characters</p>
+    <p>Categorical values with no meaningful numeric or rank interpretation should be written in a format which makes it impossible for a program to interpret it in a numerical sense. For instance, if patients are given pure numbers as identifiers then some programs may interpret patient "4" to be twice as much patient as patient "2". This will be avoided by calling the patients "p4" and "p2". In some situations categorical values can also have a natural rank, for instance the cancer stage "4" is not twice as much cancer as "2", but it is more severe and in some analysis this rank order is utilized. However, when in doubt what analysis will be done later, try to enforce the non-numeric interpretation, i.e use "stage2" and "stage4" for cancer stages.</p>
       
       <br/>
       
     <a name="information"><h4>Storing information</h4></a>
 	
-    <p>You have to be aware that any kind of formatted information, like encoding data with different colour or font, may get lost when the spreadsheet is read by a different program than the one used to create it.  Few bioinformatics programs knows how to interpret excel formatting. This information should instead be encoded in a new variable. Ideally the file should be in a simple text format as csv or tab-text, since this is the format most bioinformatics programs understands. You may still use an excel-like format as long as no important information is lost and the column-row connection is kept when saving as cvs.</p>
+    <p>You have to be aware that any kind of information in formatting, like encoding data with different colour or font, may get lost when the spreadsheet is read by a different program than the one used to create it.  Few bioinformatics programs knows how to interpret excel formatting. This information should instead be encoded in a new variable. Ideally the file should be in a simple text format as csv or tab-text, since this is the format most bioinformatics programs understands. You may still use an excel-like format as long as no important information is lost and the column-row connection is kept when saving as cvs.</p>
     <p>
     Each cell should contain only one piece of information. For example, the column <q>plate_well</q>
     with a value of "plate07-B03" it is better registered as two or three different columns: <q>plate</q> with the value plate07 and <q>well</q> with the value B03 or even split in B and 3. </p> 
@@ -203,7 +206,7 @@
          
     <a name="dates"><h4>Dates</h4></a>
     
-    <p>Date can be the source of several problems if they are stored in different formats. Although Excel can recognise most of the different formats as dates and sort them accordingly, other programs may treat them as text and sort them alphabetically.
+    <p>Date can be the source of several problems if they are stored in different formats. Although Excel can recognize most of the different formats as dates and sort them accordingly, other programs may treat them as text and sort them alphabetically.
     Thus, it is important to use the order year-month-day with zero-padding to force the alphabetical sort order to also be chronological. In addition, local conventions of the month and day order may vary resulting. One easy way to avoid problems is to routinely use the <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> standard YYYY-MM-DD everywhere. </p>
     
     <br/>
@@ -212,7 +215,7 @@
     <a name="structure"><h4>Structure</h4></a>
     
     <p>Each spreadsheet should contain only one rectangular table where rows are the samples and columns are the values. There should never be merged cells in your spreadsheet, as it can create a huge mess when
-    the spreasheet is read by a different program.</p>
+    the spreadsheet is read by a different program.</p>
     <p>Sometimes it could be vice to split the information into separate files. For instance if you have several samples for each patients as in a time series, you could have patient information in one file (disease, age, sex etc) and sample related information (date of sample, dosage etc) in another file. But remember to use consistent identifiers so the connection is not lost. This is the way data is organized in relational databases.</p>
     <p>It is important that your data file contains only raw data and you do not modify it after is has been created. Any kind of modification applied to your data file, like using calculations and formulas, can lead to
     undesired data manipulation. If you need to apply any calculation to your data, use a duplicate file. It is also recommended to avoid having information about the data in the spreadsheet. A good practice is to have in
@@ -222,7 +225,7 @@
     
     <a name="language"><h4>Language</h4></a>    
     <p>
-    	Most biologists want their study to be published in an international journal. Therefore, the information in the sample annotation needs to be in english even though the biologist might speak a different language. The best point in time to do the translation is right at the start when the sample annotation file is created. Postponing this will often lead to extra work, since the variable names and values may be embedded in tables and plots.
+    	Most biologists want their study to be published in an international journal. Therefore, the information in the sample annotation needs to be in English even though the biologist might speak a different language. The best point in time to do the translation is right at the start when the sample annotation file is created. Postponing this will often lead to extra work, since the variable names and values may be embedded in tables and plots.
     </p>
     <br/>
     
