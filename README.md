@@ -13,13 +13,14 @@ Frustration. Biologists (and similar) often requests the help of bioinformaticia
 
 # The Solution
 
-Awareness. Even though it may be too late for the current project, it is still time to improve and avoid troubles in the biologist's next projects. The bioinformatician sends a polite email to the biologist, pointing to the unfortunate choices and referring to the "Better Practices" web page. See example email. The ambition is that the biologist, the next time a sample annotation file is initiated, will remember that things matters and consult the "Better Practices" page.
+Awareness. Even though it may be too late for the current project, it is still time to improve and avoid troubles in the biologist's next projects. The bioinformatician sends a polite email to the biologist, pointing to the unfortunate choices and referring to the ["Better Practices"](https://www.elixir-norway.org/uploads/sample_annotation_better_practices.html) web page. See example email. The ambition is that the biologist, the next time a sample annotation file is initiated, will remember that things matters and consult the "Better Practices" page.
 
 <br/>
 
 # Use
 
-Any frustrated bioinformatician is welcome to use this, referring the biologist to http:elixir or make their own version. Improvements of the web page can be done through this github repository or by contacting vegard.nygaard@medisin.uio.no
+The document is hosted on elixir-norways web pages, https://www.elixir-norway.org/uploads/sample_annotation_better_practices.html.
+Any frustrated bioinformatician is welcome to use this by referring the biologist to it or make their own version. Suggestions for improvements can be done through this github repository or by contacting vegard.nygaard@medisin.uio.no
 
 <br/>
 <br/>
