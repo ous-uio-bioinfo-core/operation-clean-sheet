@@ -1,0 +1,11 @@
+
+Dear Brenda the Biologist,
+
+I have started looking into your project. There seems to be a small inconsistency with the sample Ids you have used; "Sample 1", "Sample-7", "Sample13" and "42". I assume these unfortunate names are now part of other files and it may be to late to fix this. I will be able to work through this, but for your next project I recommend you spend some extra minutes making the sample ids more consistent. Read more about the possible problems with "Inconsistent sample identifiers" and "Naming" here: 
+https://www.elixir-norway.org/uploads/sample_annotation_better_practices.html.
+Hopefully your next project will start out with a more tidy sample annotation which will decrease time needed to sort out ambiguities and decrease the chances for later errors like sample mix-ups.
+
+Yours sincerely, Ben the Bioinformatician
+
+
+
