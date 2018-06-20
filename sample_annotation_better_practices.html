@@ -3,7 +3,7 @@
     >
 <html lang="en">
 <head>
-	<title>Sample annotation better practices</title>
+	<title>Sample spreadsheet better practices</title>
 
 <style>
 body {background-color: white; color: black;margin-left: 200px; margin-right:200px; margin-top: 50px; margin-bottom: 100px; text-align: justify; line-height:1.4;}
@@ -51,21 +51,49 @@ body {background-color: white; color: black;margin-left: 200px; margin-right:200
 
 <body>
 <div id="maincontainer">
-    <h1><center>Better practices for sample annotation spreadsheet creation</center></h1>
-	
+    <h1><center>Better practices for sample spreadsheet creation</center></h1>
+	<br/>
 	<p>
-	<b>Target audience:</b> Researchers who frequently create sample annotation files, typically "the biologist".  
+	<b>Target audience:</b> Researchers who frequently create sample spreadsheets, typically "the biologist".  
 	</p>
-    <p><b>Aim:</b> Help the biologist in the future make better informed decisions when creating sample annotation files.
+    <p><b>Aim:</b> Help the biologist in the future make better informed decisions when creating sample spreadsheets.
     </p>
+    <br/>
+   <h2><center>Really short version</center></h2> 
+    <ul>
+    <li>
+			<b>File names:</b> only letters, numbers, - and _. <u><b>No</b></u> blank spaces! ex. <b>sample_info.csv</b>
+			<a href="#namingvariables">Read more about naming</a>
+		</li>
+		<li>
+			<b>Columns names:</b> only letters, numbers and _. ex. <b>tumor_size</b> 
+			<a href="#namingvariables">Read more about naming</a>
+		</li>	   
+		<li>
+			<b>Sample identifiers:</b>
+			start with at least one letter, pad with zeros. ex. <b>s003</b>
+			<a href="#namingvariables">Read more about naming</a>
+		</li>
+		<li>
+			<b>Date format: </b>
+			YYYY-MM-DD. ex. <b>2013-02-29</b>
+			<a href="#dates">Read more about dates</a>
+		</li>
+		<li>
+			<b>Formatted information:</b> no colourcoding 
+			<a href="#information">Read more about storing information</a>
+		</li>
+    </ul>
+	<br/>
+<br/>
+    <h2><center>Also short but longer version</center></h2>
     
-   
     <p>
     
-    Sample annotation spreadsheets often need to be read and understood by both other humans than the biologist and computer programs used for data analysis. It may not be a topic many biologists pay a lot of attention to, but unfortunate choices in the initial creation of the spreadsheet may later give opportunities for mistakes to be made in the analysis. In addition, it usually means that a significant amount of time must be used in back-and-forth messages between the biologist and the bioinformatician to clear out ambiguities. For those who know how to do it, generating a good sample annotation spreadsheet is not a difficult task and it can save a lot of valuable time later.</p>
+    Spreadsheets often need to be read and understood by both other humans than the biologist and computer programs used for data analysis. It may not be a topic many biologists pay a lot of attention to, but unfortunate choices in the initial creation of the spreadsheet may later give opportunities for mistakes to be made in the analysis. In addition, it usually means that a significant amount of time must be used in back-and-forth messages between the biologist and the bioinformatician to clear out ambiguities. For those who know how to do it, generating a good spreadsheet is not a difficult task and it can save a lot of valuable time later.</p>
     
     <p>   
-    This guide focuses on the creation of tidy spreadsheets that are less error-prone and easier for computers to process, although they may seem slightly less pleasant to the human eye. If you need to show your sample annotation in a presentation, you should make a pretty ad-hoc version but keep the main file computer-friendly.
+    This guide focuses on the creation of tidy spreadsheets that are less error-prone and easier for computers to process, although they may seem slightly less pleasant to the human eye. If you need to show your data in a presentation, you should make a pretty ad-hoc version but keep the main file computer-friendly.
     </p>
     <p>    
     We hope that the following advices help the biologist realize which practices are best avoided, understand why they are problematic and learn how to fix them. At the same time, we acknowledge that some of the "unfortunate" practices have value for the biologist and will be continued, but now after a better informed decision.</p> 
@@ -76,11 +104,13 @@ body {background-color: white; color: black;margin-left: 200px; margin-right:200
 <br/>
 
     
-    <h2><center>A practical example: "the Sample Annotation File from Hell"</center></h2>
+    <h2><center>A practical example: "the Spreadsheet File from Hell"</center></h2>
     
     <p>In this illustration we have collected examples of the most common problematic practices (highlighted with red numbers) to a create a spreadsheet that would be the nightmare of any data analyst. Below you can find a list with 
     the corresponding problems and some recommendations on how to fix them. You can click on the <q>Read more</q> options to get an extended explanation. Under the list you can see how the spreadsheet looks after we have applied the better practices.</p>
     <br/>
+    
+     
     <center>
     
     <div  class="imagecontainer" style="width: 1000px;">
@@ -104,8 +134,13 @@ body {background-color: white; color: black;margin-left: 200px; margin-right:200
 	<div class="circleborder errorclass" style="bottom: 85%;left: 25%;" title="Merged cells">11</div>
 	<div class="circleborder errorclass" style="bottom: 77%;left: 44%;" title="Anglophobia">12</div>
     </div>
+    </center>
+    <center>
+    	Information contained in this image has been made up for this example and it does not reflect any data from real patients.</center>
+    	
+    <br/>
     
-    <p><b>Which problems do we find in this spreadsheet? And how can we solve them?</b></p></center>
+    <center><h2>Which problems do we find in this spreadsheet? And how can we solve them?</h2></center>
     <ol type="1">
     
         <li><b>Weird file name:</b> File name contains blank spaces.  It is a good practice to substitute blank spaces with a hyphen &#8208; or an underscore _.
@@ -163,6 +198,7 @@ body {background-color: white; color: black;margin-left: 200px; margin-right:200
 	<div class="circleborder fixedclass" style="bottom: 75%;left: 50%;" title="Fixed Anglophobia">12</div>
 	
     </div>
+    Download <a href="sample_file_tidy.csv">sample_file_tidy.csv</a><br/>
     <br/>
     <br/>
     <br/>
@@ -189,7 +225,7 @@ body {background-color: white; color: black;margin-left: 200px; margin-right:200
     Each cell should contain only one piece of information. For example, the column <q>plate_well</q>
     with a value of "plate07-B03" it is better registered as two or three different columns: <q>plate</q> with the value plate07 and <q>well</q> with the value B03 or even split in B and 3. </p> 
     <p>Several functions in different programs throw errors when they find a blank cell. Avoid blank cells in your spreadsheet by registering missing data with a non-numeric value which is consistent across the table.
-    The value <q>NA</q> is widely used and can be recognized by several programs. In addition the biologist sometimes forget to fill in a value. If a blank cell means missing data, it will create an ambiguity and the bioinformatician can not know if it means "no measurement available" or "the biologist forgot to enter the measurement". If the biologist actively denotes an unavailable value as such with NA, then the bioinformatician will correctly interpret the empty cell as a mistake and get it sorted out.
+    The value <q>NA</q> is widely used and can be recognized by several programs. In addition the biologist sometimes forget to fill in a value. If a blank cell means missing data, it will create an ambiguity and the bioinformatician can not know if it means "no measurement available" or "the biologist forgot to enter the measurement". If the biologist actively denotes an unavailable value as such with NA, then the bioinformatician will correctly interpret the empty cell as a mistake and get it sorted out.</p>
     <p>When using a numeric variable, do not write any symbol apart from numeric characters in the cells. Including any other symbol can result in the program considering the values in that column as text instead of numbers and subsequent
     calculation would fail. If you need to make a note about an specific cell, use an extra  <q>Comments</q> column. </p>
      
@@ -230,7 +266,7 @@ body {background-color: white; color: black;margin-left: 200px; margin-right:200
     
     <a name="language"><h4>Language</h4></a>    
     <p>
-    	Most biologists want their study to be published in an international journal. Therefore, the information in the sample annotation needs to be in English even though the biologist might speak a different language. The best point in time to do the translation is right at the start when the sample annotation file is created. Postponing this will often lead to extra work, since the variable names and values may be embedded in tables and plots.
+    	Most biologists want their study to be published in an international journal. Therefore, the information in the sample spreadsheet needs to be in English even though the biologist might speak a different language. The best point in time to do the translation is right at the start when the file is created. Postponing this will often lead to extra work, since the variable names and values may be embedded in tables and plots.
     </p>
     <br/>
     
@@ -244,10 +280,11 @@ body {background-color: white; color: black;margin-left: 200px; margin-right:200
 	
     <p>Some of the information reflected in this guide comes from 
     <br/>
-    <pre>
+    <i>
     Karl W. Broman & Kara H. Woo (2017)<a href="https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989"> Data Organization in Spreadsheets</a>
     The American Statistician, 72:1, 2-10, DOI: 10.1080/00031305.2017.1375989
-   </pre>
+   </i>
+   </p>
    <br/>
    <p>
    In this paper you can find additional information,
@@ -258,12 +295,12 @@ body {background-color: white; color: black;margin-left: 200px; margin-right:200
 
     <p>Data Carpentry has an <a href="http://www.datacarpentry.org/spreadsheet-ecology-lesson/">online tutorial</a> about data organization in spreadsheets with several exercises. It contains
     notes for instructors who wish to use it for a small workshop or presentation. 
-    
+    </p>
 <BR/>
 <BR/>
 Files used: <br/>
-<a href="Sample%20annotation%20File%20from%20Hell.xls">Sample annotation File from Hell.xls</a><br/>
-<a href="sample_annotation_tidy.csv">sample_annotation_tidy.csv</a><br/>
+<a href="Sample%20File%20from%20Hell.xls">Sample File from Hell.xls</a><br/>
+<a href="sample_file_tidy.csv">sample_file_tidy.csv</a><br/>
 <BR/>
 <BR/>
  <hr>
